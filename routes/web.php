@@ -13,3 +13,4 @@
 
 Route::get('/', 'HomeController@checkout')->name('chekout');
 Route::post('/process-checkout', 'HomeController@checkoutProcessor');
+Route::get('/order-confirmation/{orderid}','HomeController@OrderConfirmation');

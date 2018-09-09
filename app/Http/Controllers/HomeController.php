@@ -19,12 +19,15 @@ class HomeController extends Controller
     Function to show Checkout Page
     */
     public function checkout(){
-    	return view('checkout');
+    	return $this->CheckoutService->showCheckoutForm();
     }
 
     public function checkoutProcessor(){
     	return 	$this->CheckoutService->validateAndProcessOrder();
     }
 
+    public function OrderConfirmation($orderid){
+        return view('order-confirmation')->with('orderid', $orderid);
+    }
 
 }
