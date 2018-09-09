@@ -16,7 +16,7 @@ git clone https://github.com/sirish-shrestha/payment-processor.git
 2. Set Up Virtual Hosts in the httpd-vhosts.conf file as below:
 <VirtualHost payment-processor.demo:80>
 	ServerName payment-processor.demo
-	ServerAlias www.short.ly
+	ServerAlias payment-processor.demo
 	DocumentRoot E:/xamppLatest/htdocs/payment-processor.demo/public
 	<Directory  "E:/xamppLatest/htdocs/payment-processor.demo/public">
 		Order allow,deny
