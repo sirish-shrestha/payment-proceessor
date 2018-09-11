@@ -30,7 +30,7 @@ Note: Make sure the path is correct in document root and directory above.
 127.0.0.1   payment-processor.demo
 
 4. COPY ".env.example" file to ".env" in root folder of the laravel project.
-Configure database settings as per your local settings.
+Create an empty database named "payment-processor" Configure database settings as per your local settings.
 
 5. Run command in the root project folder:
 composer install
@@ -41,3 +41,18 @@ composer install
 
 7. Generate Key:
 php artisan key:generate
+
+```
+## FOR TEST ENVIRONMENT
+```
+1. Create an empty database in mysql with name "payment-processor-test"
+
+2. Run Artisan Command for migration
+php artisan migrate --env=dusk.local
+
+3. Install Laravel dusk:
+php artisan dusk:install
+
+To Run the Test:
+php artisan dusk
+```
